@@ -27,6 +27,8 @@ type ResponseWriter interface {
 	// Similar to the http.ResponseWriter interface, with additional JSON related
 	// headers set.
 	WriteHeader(int)
+
+	Write([]byte) (int, error)
 }
 
 // This allows to customize the field name used in the error response payload.
